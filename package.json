@@ -1,0 +1,22 @@
+{
+  "name": "s67_coustume",
+  "version": "1.0.0",
+  "description": "Project Title: Wired Costumes of Celebrities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalviumcommunity/S67_coustume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalviumcommunity/S67_coustume/issues"
+  },
+  "homepage": "https://github.com/kalviumcommunity/S67_coustume#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
