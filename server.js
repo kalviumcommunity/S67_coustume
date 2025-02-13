@@ -1,18 +1,19 @@
 const express = require('express');
-const connectDB = require('./db');
-const app = express();
-const port = 3000;
+const mongoose = require('mongoose');
+const cors = require('cors');
+const menuRoutes = require('./router/menuRoutes');
 require('dotenv').config();
-const url=process.env.mong;
-console.log(url);
 
-app.listen(port,async()=>{
+const ConnectDB = require('./db');
+const app = express();
+app.use(express.json());
+app.use(cors());
 
-    try{
-        await connectDB(url);
-        console.log(`Server is running on port ${port}`);
-    }    
-    catch(err){
-        console.log(err);
-    }    
-    });
+ConnectDB(process.env.MONGO_URI);
+
+app.use('/menu', menuRoutes);
+const PORT = process.env.PORT || 8080
+// const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

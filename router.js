@@ -1,5 +1,5 @@
 const express = require('express');
-const MenuItem = require('../schema');
+const MenuItem = require('./schema');
 
 
 const router = express.Router();
